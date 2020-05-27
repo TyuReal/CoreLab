@@ -23,6 +23,17 @@ Route::view('/', 'welcome');
 Route::view('/webprog', 'pages.webprog');
 Route::view('/shop', 'pages.shop');
 
+// Очистка кеша
+Route::get('/clear', function() {
+    
+    Artisan::call('cache:clear');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+    Artisan::call('config:clear');
+        
+    return "Кэш очищен.";
+});
+
 /*
 // Просто переход на страницу, без контроллера
 Route::get('webprog', function()
