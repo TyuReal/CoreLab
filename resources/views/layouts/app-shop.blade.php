@@ -21,8 +21,10 @@
 
         <style>    
 
-            @include('css.welcome.header-css')
-            @include('css.welcome.footer-css')
+            @include('css.shop.header-css')
+            @include('css.shop.footer-css')
+            @include('css.shop.main-css')
+            @include('css.shop.sidebar-search-css')
 
         </style>
 
@@ -30,17 +32,21 @@
     <body>
 
         <!-- Header -->
-        @include('includes.welcome.header')
+        @include('includes.shop.header')
+        <!-- Sidebar Search -->
+        @include('includes.shop.sidebar-search')
+ 
+<!--        
+        <div id="main-products">
 
-        <div id="app">
-
-            <main class="py-4">
+            <main class="cards">
                 @yield('content')
             </main>
         </div>
-
+-->
+        
         <!-- Footer -->
-        @include('includes.welcome.footer')
+        @include('includes.shop.footer')
 
     </body>
 </html>

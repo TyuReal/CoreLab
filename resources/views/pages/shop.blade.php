@@ -13,7 +13,6 @@
                 $client = new Client([
                     // Базовый URI используется с относительными запросами
                     'base_uri' => 'http://spkterminal/unf_fisenko/hs/CL_Goods/',
-//                    'base_uri' => 'http://spkterminal/unf_fisenko/hs/CL/',
                     // Вы можете установить любое количество параметров запроса по умолчанию.
                     'timeout' => 2.0,
                     'auth' => ['Даньковский Виталий', '503515']
@@ -24,9 +23,8 @@
                     'json' => [
  //                       'GoodArticle' => 'SY-06',
     //                    'GoodArticle' => 'art-01',
-  //                      'GoodName' => 'Тест',
-                        'name' => 'Test user',
-                        'password' => 'testpassword',
+//                        'GoodName' => 'Тест',
+                        'GoodCategory' => 'Товары'
                     ]
                 ]);
 
