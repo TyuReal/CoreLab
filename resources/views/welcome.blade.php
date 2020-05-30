@@ -5,18 +5,27 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>CoReLab - Лаборатория по ремонту ноутбуков и компьютеров</title>
+        <title>{{ config('app.name', 'CoReLab - Лаборатория по ремонту ноутбуков и компьютеров!') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
         <style>
+            
+            html, body {
+                background:     #fff;
+                color:          #636b6f;
+                height:         100vh;
+                margin:         0;
+                font-family:    'Nunito', sans-serif;
+                font-weight:    200;
+            }
 
-            @include('css.welcome.header-css')
-            @include('css.welcome.main-css')
-            @include('css.welcome.sidebar-css') 
-            @include('css.welcome.footer-css')
+            @include('css.header-css')
+            @include('css.circle-css')
+            @include('css.sidebar-address-css') 
+            @include('css.footer-css')
 
         </style>
 
@@ -25,13 +34,13 @@
     <body>
 
         <!-- Header -->
-        @include('includes.welcome.header')
+        @include('includes.header')
         <!-- Main -->
-        @include('includes.welcome.main')
-        <!-- Sidebar -->
-        @include('includes.welcome.sidebar')
+        @include('includes.circle')
+        <!-- Sidebar Address-->
+        @include('includes.sidebar-address')
         <!-- Footer -->
-        @include('includes.welcome.footer')
+        @include('includes.footer')
 
     </body>
 

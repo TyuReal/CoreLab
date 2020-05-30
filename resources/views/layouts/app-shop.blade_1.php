@@ -20,29 +20,27 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <style>    
-            
-             html, body {
-                background:     #fff;
-                color:          #636b6f;
-                height:         100vh;
-                margin:         0;
-                font-family:    'Nunito', sans-serif;
-                font-weight:    200;
-            }
-           
-            @include('css.header-css')
-            @include('css.sidebar-search-css')
+/*
+            @include('css.shop.header-css')
+            @include('css.shop.main-css')
+            @include('css.shop.sidebar-search-css') 
+*/
             @include('css.footer-css')
 
         </style>
 
     </head>
     <body>
-        
+
         <!-- Header -->
-        @include('includes.header')
+  <!--      @include('includes.shop.header')  -->
         <!-- Sidebar Search -->
-        @include('includes.sidebar-search')
+  <!--      @include('includes.shop.sidebar-search') -->
+<!--
+        <div>  
+       Ля ля
+        </div> 
+  -->      
         <!-- Footer -->
         @include('includes.footer')
 
