@@ -1,35 +1,38 @@
-@extends('layouts.app-shop')
-
-@section('content')
-
-<?php
+        <div class="catalog" >
+            Область поиска <br>
+            
+            <?php
 
     use GuzzleHttp\Client;
 
     // Создаем основу запроса к 1С
-    $client = new Client([
+    $clientCat = new Client([
         // Базовый URI используется с относительными запросами
         'base_uri' => 'http://spkterminal/unf_fisenko/hs/CL_Goods/',
         // Вы можете установить любое количество параметров запроса по умолчанию.
-        'timeout' => 8.0,
+        'timeout' => 2.0,
         'auth' => ['webuser', 'webuserpass']
             ]);
 
     // Дополняем запрос параметрами, отправляем его и получаем ответ
-    $response = $client->request('POST', 'GetItems', [
-        // Вы можете установить любое количество параметров запроса.
-        'json' => [
-            // 'GoodArticle' => 'SY-06',
-            // 'GoodArticle' => 'art-01',
-            // 'GoodName' => 'Тест',
-            'GoodCategory' => 'Товары'
-        ]
-        ]);
+    $responseCat = $clientCat->request('POST', 'GetCatalog');
+    
+    echo $responseCat->getBody();
+    echo "
+    <ul id=\"mynavbar\">
+      <li><a href=\"#\">Главная</a></li>
+      <li><a href=\"#\">Новости</a></li>
+      <li><a href=\"#\">Контакты</a></li>
+      <li><a href=\"#\">О нас</a></li>
+    </ul>";
 
+    
+/*
     // Конвертируем json в Collection
     // и сразу создаем ключевое поле GoodCode
     $myCollection = collect(json_decode($response->getBody(), true))->keyBy('GoodCode');
 
+//    echo "<p>$myCollection->count() </p> \n";
     echo $response->getBody()->getSize();
     echo " байт";
     
@@ -60,8 +63,7 @@
         echo "          <div class=\"price\"><big><b>$myPrice руб.</b></big></div> \n";
         echo "      </div> \n";
     });
- 
+*/
+    
 ?>
-@endsection
-
-
+        </div>

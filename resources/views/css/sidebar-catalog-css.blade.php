@@ -1,4 +1,4 @@
-            .search { 
+            .catalog { 
                 position:       fixed;              /* Позиционирование */
                 left :          0px;                /* Прижимаем к правому краю */
                 top:            6%;                 /* Отступ сверху*/
@@ -12,3 +12,26 @@
                 margin:         10px 10px;          /* Отступ от границы блока внешний */
             }
 
+            #mynavbar {
+                margin:             0;                  /* */
+                padding:            0;                  /* */
+                list-style-type:    none;               /* */
+                width:              100px;              /* */
+            }
+            #mynavbar li {
+                border-left:        10px solid #666;
+                border-bottom:      1px solid #666;
+            }
+            #mynavbar a {
+                background-color:   #949494;
+                color:              #fff;
+                padding:            5px;
+                text-decoration:    none;
+                font-weight:        bold;
+                border-left:        5px solid #33ADFF;
+                display:            block;
+            }
+            #mynavbar a:hover {
+                background-color:   #666;
+                border-left:        5px solid #3333FF;
+            }
