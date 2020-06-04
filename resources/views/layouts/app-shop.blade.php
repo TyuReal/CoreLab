@@ -69,9 +69,9 @@
                 text-align:     right;              /* Выравнивание */
             }
             
-            @include('css.header-css')
-            @include('css.sidebar-catalog-css')
+            @include('css/header-css')
             @include('css.footer-css')
+            @include('css.sidebar-catalog-css')
 
         </style>
 
@@ -80,7 +80,7 @@
         
         <!-- Header -->
         @include('includes.header')
-        <!-- Sidebar Search -->
+        <!-- Sidebar Catalog -->
         @include('includes.sidebar-catalog')
         <!-- Footer -->
         @include('includes.footer')

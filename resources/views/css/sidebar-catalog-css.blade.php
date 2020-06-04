@@ -16,7 +16,7 @@
                 margin:             0;                  /* */
                 padding:            0;                  /* */
                 list-style-type:    none;               /* */
-                width:              100px;              /* */
+                width:              95%;                /* */
             }
             #mynavbar li {
                 border-left:        10px solid #666;
