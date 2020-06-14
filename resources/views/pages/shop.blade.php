@@ -11,7 +11,7 @@
         // Базовый URI используется с относительными запросами
         'base_uri' => 'http://spkterminal/unf_fisenko/hs/CL_Goods/',
         // Вы можете установить любое количество параметров запроса по умолчанию.
-        'timeout' => 5.0,
+        'timeout' => 10.0,
         'auth' => ['webuser', 'webuserpass']
             ]);
 
