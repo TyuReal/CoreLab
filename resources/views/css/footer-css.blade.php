@@ -9,5 +9,5 @@
 
             .copyright {
                 line-height:    1px;                /* Регулирует отступ сверху */
+                margin-left:    10px;               /* Отступ слева */
             }
-

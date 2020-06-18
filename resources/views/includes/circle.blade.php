@@ -41,7 +41,8 @@
                 </div>
                 <div class="block">
                     <div class="square">
-                        <a href="/webprog">
+<!--                        <a href="/webprog">
+-->                        <a href='#'>
                             <img  hspace=10 vspace=10 src="./images/facade/front_problem_120x120.ico" width="60" height="60" alt="Создание сайтов">
                         </a>
                     </div>

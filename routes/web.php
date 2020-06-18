@@ -20,7 +20,7 @@ Route::get('/', function () {
 */
 
 Route::view('/', 'welcome');
-Route::view('/webprog', 'pages.webprog');
+Route::view('/webprog', 'pages.programming');
 Route::view('/shop', 'pages.shop');
 
 // Очистка кеша
