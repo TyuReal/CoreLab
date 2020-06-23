@@ -27,18 +27,45 @@
                 left:           10%;                    /* Отступ слева */
                 height:         80%;                    /* Высота блока */
                 width:          80%;                    /* Ширина блока */
-                display:        flex;                   /* Тип блока */
-                align-items:    center;                 /* Вертикальное центрирование содержимого */
+                display:        inline-block;           /* Тип блока */
+//                align-items:    center;                 /* Вертикальное центрирование содержимого */
                 background:     white;                  /* Цвет фона */
                  
+            }
+            .mycontent img {
+                margin:         30px;                      /* Поля внешние по умолчанию */
             }
             
             #center { 
                 text-align:     center;                 /* Выравнивание текста по центру */
                 margin:         auto;                   /* Выравнивание текстового блока по центру */
             }
-
-
+            
+            .price {
+                position:       absolute;               /* Относительное позиционирование */
+                right:          20px;                   /* Прижимаем к правому краю */
+                top:            20%;                    /* Отступ сверху */
+                height:         60px;                   /* Высота блока */
+                width:          140px;                  /* Ширина блока */
+                margin:         20px;                   /* Отступ от границы внешний*/
+                display:        inline-block;           /* Тип блока */   
+                text-align:     right;                  /* Выравнивание */
+                color:          black;                  /* Цвет шрифта */
+//                background:     blue;                  /* Цвет фона */
+            }
+           
+            .description {
+                position: relative;                     /* Относительное позиционирование */
+                top:            30px;                   /* Отступ сверху*/
+                left:           50px;                   /* Отступ слева */
+//                height:         50%;                    /* Высота блока */
+                width:          95%;                    /* Ширина блока */
+                display:        inline-block;           /* Тип блока */
+//                align-items:    center;                /* Вертикальное центрирование содержимого */
+//                background:     yellow;                /* Цвет фона */
+//                margin:         0px;                   /* Отступ от границы внешний*/
+            }
+            
             @include('css.header-css')
             @include('css.footer-css')
 

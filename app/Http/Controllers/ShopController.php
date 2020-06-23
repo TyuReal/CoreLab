@@ -76,8 +76,24 @@ class ShopController extends Controller {
     
     public function item($itemcard) {
         
- //           die ($itemcard);
-    return \view('pages.gooditem');
+        // Формируем запрос для отображения карточки товара
+        $responseItemCard = Http::timeout(50)
+                ->withBasicAuth('webuser', 'webuserpass')
+                ->post('http://spkterminal/unf_fisenko/hs/CL_Goods/GetItems', [
+                    'GoodItemCode' => $itemcard
+                ]);
+        // Конвертируем json в Collection
+        // и сразу создаем ключевое поле GoodCode
+        $myCollectionItemCard = collect(json_decode($responseItemCard->getBody(), true))->keyBy('GoodCode');
+        
+//            die (dd($myCollectionItemCard));
+        
+        return \view('pages.gooditem', [
+            'param_Photo' => collect($myCollectionItemCard->first())->get('GoodPhoto'), 
+            'param_Name' => collect($myCollectionItemCard->first())->get('GoodName'),
+            'param_Price' => collect($myCollectionItemCard->first())->get('GoodPrice'),
+            'param_Description' => collect($myCollectionItemCard->first())->get('GoodDescription'),
+        ]);
     }
 
 }

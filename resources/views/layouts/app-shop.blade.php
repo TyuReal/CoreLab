@@ -51,6 +51,11 @@
                 padding:        20px;               /* Отступ от границы внутренний*/
                 border:         2px inset black;    /* Параметры границы */         
             }
+            .goodcard a {
+                color:              black;
+                text-decoration:    none;           /* Подчеркивание убрать */
+            }
+            
             
             .goodcard img {
                 margin:         3px 20px 3px 3px;   /* Отступ от границы внешний*/

@@ -30,7 +30,7 @@
         else 
             {echo "          <img src='/images/no_picture.png' align='left'> \n";};
 
-        echo "          <big><b>$myName</b></big> \n";
+        echo "          <big><b><a href='/shop/items/$myCode' target='_blank'>$myName</a></b></big> \n";
         echo "          <p>Артикул: $myArticle</p> \n";
         echo "          <div class=\"price\"><big><b>$myPrice руб.</b></big></div> \n";
         echo "      </div> \n";
