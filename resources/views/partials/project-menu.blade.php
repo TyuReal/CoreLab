@@ -1,6 +1,6 @@
 <?php
 
-    echo "<li><a href='#'>$myName </a>";
+    echo "<li><a href='/shop/$myCode'>$myName </a>";
     
 	if ($myCollectCatalog->contains('CatalogParentCode', $myCode)) {
 	    echo "\n <ul class='navbar'> \n";

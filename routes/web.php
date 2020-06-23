@@ -21,7 +21,10 @@ Route::get('/', function () {
 
 Route::view('/', 'welcome');
 Route::view('/webprog', 'pages.programming');
-Route::view('/shop', 'pages.shop');
+
+Route::get('/shop/',                    'ShopController@show')->name('showShop');
+Route::get('/shop/{category}',          'ShopController@index')->name('indexShop');
+Route::get('/shop/items/{itemcard}',    'ShopController@item')->name('itemShop');
 
 // Очистка кеша
 Route::get('/clear', function() {
@@ -33,15 +36,3 @@ Route::get('/clear', function() {
         
     return "Кэш очищен.";
 });
-
-/*
-// Просто переход на страницу, без контроллера
-Route::get('webprog', function()
-{
-    return View::make('pages.webprog');
-});
-Route::get('shop', function()
-{
-    return View::make('pages.shop');
-});
-*/
